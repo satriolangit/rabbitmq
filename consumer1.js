@@ -18,7 +18,7 @@ async function consume() {
       (message) => {
         if (message.content) {
           console.log("receiving message : ", message.content.toString());
-          channel.ackAll();
+          channel.ack(message);
         }
       },
       true
